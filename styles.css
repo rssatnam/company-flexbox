@@ -92,7 +92,7 @@ nav ul a:hover {
 }
 
 .companies figure {
-  width: 30%;
+  flex-basis: 30%;
   padding: 1rem;
 }
 
@@ -131,4 +131,35 @@ nav ul a:hover {
 .copyright {
   padding: 0 1rem 5rem;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 1200px) {
+  .companies {
+    align-items: center;
+  }
+  .companies figure:nth-child(2) {
+    flex-grow: 2;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  nav ul,
+  .companies,
+  .teammates {
+    flex-direction: column;
+  }
+
+  nav ul a {
+    margin: 0 auto 1rem;
+    max-width: 95%;
+  }
+
+  .companies figure {
+    flex-grow: 1;
+    max-width: 90%;
+  }
+
+  footer a {
+    font-size: 0.8rem;
+  }
 }
